@@ -83,12 +83,7 @@ class Calc {
         }
         return 0;
     }
-    public static void main (String[]args) throws CalcException {
-        Scanner in = new Scanner(System.in);
-        String expression = in.nextLine();
-        System.out.println(calc(expression));
-    }
-    private static int resultInt (String action,int a, int b){
+    static int resultInt (String action,int a, int b){
         switch (action) {
             case "+":
                 return a + b;
@@ -104,7 +99,7 @@ class Calc {
                 }
         }
     }
-    private static int convertABArab (String input){
+    static int convertABArab (String input){
         String[] arab = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
         for (int i = 0; i < arab.length; i++) {
             if (arab[i].equals(input)) {
@@ -112,5 +107,10 @@ class Calc {
             }
         }
         return 0;
+    }
+    public static void main (String[]args) throws CalcException {
+        Scanner in = new Scanner(System.in);
+        String expression = in.nextLine();
+        System.out.println(calc(expression));
     }
 }
