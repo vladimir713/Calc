@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-class Calc {
+class Main {
     public static String calc(String input) throws CalcException {
         String res = "";
         String action_reg = "[+\\-*/]";
@@ -109,8 +109,8 @@ class Calc {
         return 0;
     }
     public static void main (String[]args) throws CalcException {
-        Scanner in = new Scanner(System.in);
-        String expression = in.nextLine();
+        Scanner input = new Scanner(System.in);
+        String expression = input.nextLine();
         System.out.println(calc(expression));
     }
 }
